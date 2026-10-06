@@ -1,0 +1,27 @@
+[project]
+name = "outlier-accelerometers"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "rizac", email = "riccardo.zaccarelli@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=2.4.6",
+    "pandas>=3.0.6",
+    "psycopg[binary]>=3.3.6",
+    "scipy>=1.17.1",
+]
+
+[project.scripts]
+outlier-accelerometers = "outlier_accelerometers:main"
+
+[build-system]
+requires = ["uv_build>=0.12.23,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "dvc>=3.67.1",
+]
